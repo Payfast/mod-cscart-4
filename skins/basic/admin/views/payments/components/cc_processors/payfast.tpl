@@ -14,7 +14,13 @@
 		<option value="live" {if $processor_params.mode == "live"}selected="selected"{/if}>{$lang.live}</option>
 	</select>
 </div>
-
+<div class="form-field">
+    <label for="debug">{$lang.text_debug}:</label>
+    <select name="payment_data[processor_params][debug]" id="debug">
+        <option value="true" {if $processor_params.debug}selected="selected"{/if}>{$lang.true}</option>
+        <option value="false" {if !$processor_params.debug}selected="selected"{/if}>{$lang.false}</option>
+    </select>
+</div>
 
 {include file="common_templates/subheader.tpl" title=$lang.text_payfast_status_map}
 

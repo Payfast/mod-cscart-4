@@ -19,10 +19,13 @@
  * @author     Ron Darby
  * @copyright  2009-2012 PayFast (Pty) Ltd
  * @license    http://www.opensource.org/licenses/lgpl-license.php LGPL
+ * @version    1.1.0
  */
 if ( !defined('AREA') ) { die('Access denied'); }
 
 include('payfast/payfast_common.inc');
+
+define( 'PF_DEBUG', $processor_data['params']['debug'] );
 
 $payfast_merchant_id = $processor_data['params']['merchant_id'];
 $payfast_merchant_key = $processor_data['params']['merchant_key'];

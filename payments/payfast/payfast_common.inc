@@ -26,7 +26,7 @@
 define( 'PF_SOFTWARE_NAME', 'CSCart' );
 define( 'PF_SOFTWARE_VER', "3.0.0" );
 define( 'PF_MODULE_NAME', 'PayFast-CSCart' );
-define( 'PF_MODULE_VER', '1.0.0' );
+define( 'PF_MODULE_VER', '1.1.0' );
 
 // Features
 // - PHP
@@ -76,7 +76,7 @@ define( 'PF_MSG_PENDING',
     ' Transaction Notification when the payment status changes to'.
     ' "Completed", or "Failed"' );
     
-define( 'PF_DEBUG', true );
+
 
 
 /**
