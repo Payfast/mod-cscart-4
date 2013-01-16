@@ -16,7 +16,7 @@ if ($processor_data['params']['mode'] == 'sandbox') {
     $pfHost = "www.payfast.co.za";
 }
     
-	$pfHost = 'www.payfast.local'; //Local Testing
+	//$pfHost = 'www.payfast.local'; //Local Testing
 
 // Return from paypal website
 if (defined('PAYMENT_NOTIFICATION')) {
