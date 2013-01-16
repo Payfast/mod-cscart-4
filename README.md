@@ -5,7 +5,6 @@ mod-cscart
 ====== Installation and Testing ======
 To install the PayFast payment module, follow the instructions below: 
 
-  - [[https://www.payfast.co.za/c/std/shopping-carts|Download the payment module]] from our site
   - Unzip the module to a temporary location on your computer
   - Copy the “payments”, “skins” and “vars” folders in the archive to your base “CSCart” folder
     * This should NOT overwrite any existing files or folders and merely supplement them with the PayFast files
@@ -54,13 +53,13 @@ In order to make the module "LIVE", follow the instructions below:
   - Under PayFast, click on the "Edit" link
   - In the Configure section, use the following settings:
     * Set Sandbox/Live = "Live"
-    * Merchant ID = <Merchant ID as given on your [[https://www.payfast.co.za/acc/integration|Integration Page]]>
-    * Merchant Key = <Merchant Key as given on your [[https://www.payfast.co.za/acc/integration|Integration Page]]>
+    * Merchant ID = <Merchant ID as given on your https://www.payfast.co.za/acc/integration|Integration Page>
+    * Merchant Key = <Merchant Key as given on your https://www.payfast.co.za/acc/integration|Integration Page>
   - Click Save
 
 ====== Upgrading ======
 === Standard Upgrade Procedure ===
-  - [[https://www.payfast.co.za/c/std/shopping-carts|Download the payment module]] from our site
+  - https://www.payfast.co.za/c/std/shopping-carts|Download the payment module from our site
   - Unzip the module to a temporary location on your computer
   - Copy the "modules" folder in the archive to your base "CSCart" folder
 
@@ -80,7 +79,7 @@ If the payment is SUCCESSFUL through PayFast:
 
 ====== Useful links ======
 
-  * [[http://forum.cs-cart.com/]]
+  * http://forum.cs-cart.com/
     * Support forums for CSCart
-  * [[http://www.cs-cart.com]]
+  * http://www.cs-cart.com
     * The CSCart website
