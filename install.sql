@@ -8,4 +8,3 @@ REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','s
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_paynow','Pay Now Using PayFast');
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_item_name','Your Order');
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_item_description','Shipping, Handling, Discounts and Taxes Included');
-REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_','');
