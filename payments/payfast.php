@@ -26,7 +26,6 @@ if ( !defined('AREA') ) { die('Access denied'); }
 include('payfast/payfast_common.inc');
 
 define( 'PF_DEBUG', $processor_data['params']['debug'] );
-
 $payfast_merchant_id = $processor_data['params']['merchant_id'];
 $payfast_merchant_key = $processor_data['params']['merchant_key'];
     
@@ -38,19 +37,23 @@ if ($processor_data['params']['mode'] == 'sandbox') {
 } else {
     $pfHost = "www.payfast.co.za";
 }
-    
+   
 	//$pfHost = 'www.payfast.local'; //Local Testing
 
 // Return from paypal website
 if (defined('PAYMENT_NOTIFICATION')) {
-    
-    
-    
-    
+      
     
 	if ($mode == 'notify' && !empty($_REQUEST['m_payment_id'])) {
+
         $order_id = $_POST['m_payment_id'];
-		if (fn_check_payment_script('payfast.php', $order_id, $processor_data)) {
+		// Get order data
+        $order_info = fn_get_order_info($order_id);
+
+        $preHost = $order_info['payment_method']['params']['mode'] == 'sandbox' ? 'sandbox' : 'www' ;
+        $pfHost = $preHost.'.payfast.co.za';
+
+        if (fn_check_payment_script('payfast.php', $order_id, $processor_data)) {
             
             if (empty($processor_data)) {
 				$processor_data = fn_get_processor_data($order_info['payment_id']);
@@ -63,7 +66,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
            $pfDone = false;
            $pfData = array();	   
            $pfParamString = '';
-            
+            pflog($pfHost);
             pflog( 'PayFast ITN call received' );
     
             //// Notify PayFast that information has been received
@@ -116,9 +119,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
             }
             //// Get internal cart
             if( !$pfError && !$pfDone )
-            {
-                // Get order data
-                $order_info = fn_get_order_info($order_id);
+            {           
         
                 pflog( "Purchase:\n". print_r( $order_info, true )  );
             }
