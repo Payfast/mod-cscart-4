@@ -2,7 +2,7 @@ mod-cscart
 ==========
 PayFast module for CSCart
 
-PayFast CSCart Module v1.1.0 for CSCart v3.0.6
+PayFast CSCart Module v1.1.1 for CSCart v3.0.6
 -------------------------------------------------------
 Copyright (c) 2011 PayFast (Pty) Ltd
 
