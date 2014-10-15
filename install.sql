@@ -5,6 +5,7 @@ REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','t
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_sandbox_live','Sandbox/Live');
 
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','sandbox','Sandbox');
+REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','passphrase','ONLY INSERT A VALUE INTO THE SECURE PASSPHRASE IF YOU HAVE SET THIS ON THE INTEGRATION PAGE OF THE LOGGED IN AREA OF THE PAYFAST WEBSITE!!!!!');
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_paynow','Pay Now Using PayFast');
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_item_name','Your Order');
 REPLACE INTO cscart_language_values (`lang_code`,`name`,`value`) VALUES ('EN','text_payfast_item_description','Shipping, Handling, Discounts and Taxes Included');

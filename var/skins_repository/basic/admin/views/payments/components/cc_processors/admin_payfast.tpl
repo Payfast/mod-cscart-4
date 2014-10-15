@@ -6,6 +6,10 @@
 	<label for="merchant_key">{$lang.merchant_key}:</label>
 	<input type="text" name="payment_data[processor_params][merchant_key]" id="merchant_key" value="{$processor_params.merchant_key}" class="input-text" />
 </div>
+<div class="form-field">
+	<label for="passphrase">{$lang.passphrase}:</label>
+	<input type="text" name="payment_data[processor_params][passphrase]" id="passphrase" value="{$processor_params.passphrase}" class="input-text" />
+</div>
 
 <div class="form-field">
 	<label for="mode">{$lang.text_payfast_sandbox_live}:</label>

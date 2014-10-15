@@ -19,7 +19,7 @@
  * @author     Ron Darby
  * @copyright  2009-2012 PayFast (Pty) Ltd
  * @license    http://www.opensource.org/licenses/lgpl-license.php LGPL
- * @version    1.1.0
+ * @version    1.2.0
  */
 if ( !defined('AREA') ) { die('Access denied'); }
 
@@ -28,7 +28,8 @@ include('payfast/payfast_common.inc');
 define( 'PF_DEBUG', $processor_data['params']['debug'] );
 $payfast_merchant_id = $processor_data['params']['merchant_id'];
 $payfast_merchant_key = $processor_data['params']['merchant_key'];
-    
+$payfast_passphrase = $processor_data['params']['passphrase'];  
+
 $current_location = Registry::get('config.current_location');
 if ($processor_data['params']['mode'] == 'sandbox') {
 	$pfHost = "sandbox.payfast.co.za";
@@ -37,7 +38,7 @@ if ($processor_data['params']['mode'] == 'sandbox') {
 } else {
     $pfHost = "www.payfast.co.za";
 }
-   
+ 
 	//$pfHost = 'www.payfast.local'; //Local Testing
 
 // Return from paypal website
@@ -97,9 +98,11 @@ if (defined('PAYMENT_NOTIFICATION')) {
             if( !$pfError && !$pfDone )
             {
                 pflog( 'Verify security signature' );
+
+                $pfPassphrase = $processor_data['params']['mode'] == 'sandbox' ? null : ( !empty( $payfast_passphrase ) ? $payfast_passphrase : null );
             
                 // If signature different, log for debugging
-                if( !pfValidSignature( $pfData, $pfParamString ) )
+                if( !pfValidSignature( $pfData, $pfParamString, $pfPassphrase ) )
                 {
                     $pfError = true;
                     $pfErrMsg = PF_ERR_INVALID_SIGNATURE;
@@ -239,8 +242,18 @@ if (defined('PAYMENT_NOTIFICATION')) {
     $payfast_item_name = fn_get_lang_var('text_payfast_item_name').' - '. $order_id;    
     $secure .= '&item_name='.urlencode($payfast_item_name);
     $payfast_item_description = fn_get_lang_var('text_payfast_item_description');
-    $secure .= '&item_description='.urlencode($payfast_item_description);	   
-	$securityHash = md5($secure);
+    $secure .= '&item_description='.urlencode($payfast_item_description);	
+
+
+    if( !empty( $payfast_passphrase ) && $processor_data['params']['mode'] != 'sandbox' )
+    {
+        $secureString = $secure.'passphrase=' . urlencode( $payfast_passphrase  );
+    }
+    else
+    {
+        $secureString = substr( $secureString, 0, -1 );
+    }   
+	$securityHash = md5( $secure );
 	//Order Total
 	
 	
