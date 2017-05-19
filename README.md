@@ -25,9 +25,9 @@ INTEGRATION:
 Once you are ready to go live change the ‘sandbox/live mode to ‘live’ and insert your PayFast merchant ID and Key and click save
 
 ******************************************************************************
-*                                                                            *
-*    Please see the URL below for all information concerning this module:    *
-*                                                                            *
-*                 https://www.payfast.co.za/shopping-carts/cs-cart/          *
-*                                                                            *
+
+    Please see the URL below for all information concerning this module:
+
+                 https://www.payfast.co.za/shopping-carts/cs-cart/
+
 ******************************************************************************
