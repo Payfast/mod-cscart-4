@@ -24,4 +24,4 @@ INTEGRATION:
 - Password: clientpass
 Once you are ready to go live change the ‘sandbox/live mode to ‘live’ and insert your PayFast merchant ID and Key and click save
 
-Please (click here)[https://payfast.io/integration/shopping-carts/cs-cart/] for more information concerning this module.
+Please [click here](https://payfast.io/integration/shopping-carts/cs-cart/) for more information concerning this module.
