@@ -14,9 +14,9 @@ INTEGRATION:
 - This should not overwrite any existing files or folders and merely supplement them with the PayFast files, this is however, dependent on the FTP program you use
 3. Login to your Database Management System of choice and run the install.sql file
 4. Login to the admin section of your CSCart installation
-5. Navigate to the Administration ? Payment Methods page
+5. Navigate to the Administration   Payment Methods page
 6. Click the ‘Add Payment’ button
-7. Input a Name?’PayFast’, select Template?’payfast.tpl’, select Processor?’PayFast’, select Icon?Url and input https://www.payfast.co.za/images/logo.png, complete the form accordingly and click ‘Create’.
+7. Input a Name ’PayFast’, select Template ’payfast.tpl’, select Processor ’PayFast’, select Icon Url and input https://www.payfast.co.za/images/logo.png, complete the form accordingly and click ‘Create’.
 8. Once the payment method is created, click on it’s ‘Edit’ button.
 9. Click the ‘Configure’ button, the PayFast options will then be shown, select the payment status for ‘completed’ and ‘failed’ payments, select the sandbox mode and click ‘Save’.
 10. The module is now ready to be tested with the Sandbox. To test with the sandbox, use the following login credentials when redirected to the PayFast site:
