@@ -1,5 +1,5 @@
-mod-cscart
-==========
+# mod-cscart
+
 PayFast module for CSCart
 
 PayFast CSCart Module v1.1.1 for CSCart v3.0.6
@@ -24,10 +24,4 @@ INTEGRATION:
 - Password: clientpass
 Once you are ready to go live change the ‘sandbox/live mode to ‘live’ and insert your PayFast merchant ID and Key and click save
 
-******************************************************************************
-
-    Please see the URL below for all information concerning this module:
-
-                 https://www.payfast.co.za/shopping-carts/cs-cart/
-
-******************************************************************************
+Please (click here)[https://payfast.io/integration/shopping-carts/cs-cart/] for more information concerning this module.
